@@ -64,7 +64,7 @@ table {
     left: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     height: 4.5rem;
@@ -72,18 +72,9 @@ table {
     border-bottom: 2px solid #CB2D6F;
 }
 
-.header h2 {
-    margin-left: 2.5rem;
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: #14A098;
-    text-shadow: 1px 1px #CB2D6F;
-}
-
 .nav {
     display: flex;
     gap: 1.5rem;
-    margin-right: 2.5rem;
 }
 
 .nav a {
@@ -186,7 +177,7 @@ table {
 .top-rated-page {
     position: absolute;
     top: 4.5rem;
-    height: 2700px;
+    height: 2800px;
     width: 100vw;
     background-color: #CCCCCC;
 }

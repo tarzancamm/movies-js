@@ -17,7 +17,7 @@ const nowPlayingHandler = () => {
       let movieList = res.data.results;
       for (let i = 0; i < movieImage.length; i++) {
         movieImage[i].innerHTML = `<img src=https://image.tmdb.org/t/p/original${movieList[i].poster_path} />`;
-        movieRating[i].textContent = movieList[i].vote_average;
+        movieRating[i].textContent = movieList[i].vote_average.toFixed(1);
       }
     })
     .catch((err) => {
@@ -28,13 +28,13 @@ const nowPlayingHandler = () => {
 const popularHandler = () => {
   axios
     .get(
-      "https://api.themoviedb.org/3/movie/popular?api_key=ab914da83ff50db0baf3acd601780e5f&language=en-US&page=1"
+      "https://api.themoviedb.org/3/trending/movie/day?api_key=ab914da83ff50db0baf3acd601780e5f"
     )
     .then((res) => {
       let popularMovies = res.data.results;
       for (let i = 0; i < movieImage2.length; i++) {
         movieImage2[i].innerHTML = `<img src=https://image.tmdb.org/t/p/original${popularMovies[i].poster_path} />`;
-        movieRating2[i].textContent = popularMovies[i].vote_average;
+        movieRating2[i].textContent = popularMovies[i].vote_average.toFixed(1);
       }
     })
     .catch((err) => {
@@ -51,7 +51,7 @@ const topRatedHandler = () => {
       let topRatedMovies = res.data.results;
       for (let i = 0; i < movieImage3.length; i++) {
         movieImage3[i].innerHTML = `<img src=https://image.tmdb.org/t/p/original${topRatedMovies[i].poster_path} />`;
-        movieRating3[i].textContent = topRatedMovies[i].vote_average;
+        movieRating3[i].textContent = topRatedMovies[i].vote_average.toFixed(1);
         movieDesc3[i].textContent = topRatedMovies[i].overview
       }
     })
@@ -70,7 +70,7 @@ const upcomingHandler = () => {
       console.log(upcomingMovies);
       for (let i = 0; i < movieImage4.length; i++) {
         movieImage4[i].innerHTML = `<img src=https://image.tmdb.org/t/p/original${upcomingMovies[i].poster_path} />`;
-        movieRating4[i].textContent = upcomingMovies[i].vote_average;
+        movieRating4[i].textContent = upcomingMovies[i].vote_average.toFixed(1);
       }
     })
     .catch((err) => {
@@ -78,6 +78,7 @@ const upcomingHandler = () => {
     });
 };
 
+// Functions run on initialization
 nowPlayingHandler();
 popularHandler();
 topRatedHandler();
