@@ -207,6 +207,25 @@ table {
     color: #501F3A;
 }
 
+.next {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.next-page {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color:#14A098;
+    margin-top: 1rem;
+}
+
+.next-page:hover {
+    color:#501F3A;
+}
+
 
 /* Upcoming Page */
 

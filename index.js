@@ -7,6 +7,8 @@ const movieRating3 = document.getElementsByClassName("movie-rating-3");
 const movieDesc3 = document.getElementsByClassName("movie-desc-3")
 const movieImage4 = document.getElementsByClassName("movie-img-4");
 const movieRating4 = document.getElementsByClassName("movie-rating-4");
+const prev = document.getElementById("prev")
+const next = document.getElementById("next")
 
 const nowPlayingHandler = () => {
   axios
@@ -83,3 +85,6 @@ nowPlayingHandler();
 popularHandler();
 topRatedHandler();
 upcomingHandler();
+
+
+prev.addEventListener("click", topRatedHandler)
